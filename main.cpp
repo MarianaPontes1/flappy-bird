@@ -143,6 +143,7 @@ int main(int argc, const char** argv)
         {
             if (pontuacao > highScore) {
                 highScore = pontuacao;
+                system("mplayer superpuyofans1234-winner-game-sound-404167.mp3 &");
                 salvarHighScore(hsArquivo, highScore);
             }
 
@@ -155,22 +156,22 @@ int main(int argc, const char** argv)
             int cy = smallFrame.rows / 2;
 
             putText(smallFrame, "GAME OVER",
-                    Point(cx-40, cy ),
-                    FONT_HERSHEY_COMPLEX, 2.0, Scalar(0, 0, 255), 4);
+                    Point(cx-200, cy -80),
+                    FONT_HERSHEY_COMPLEX, 2.0, Scalar(200, 50, 200), 4);
 
-            putText(smallFrame, "Pontuacao: " + to_string(pontuacao),
-                    Point(cx - 120, cy),
+            putText(smallFrame, "Score: " + to_string(pontuacao),
+                    Point(cx -90, cy),
                     FONT_HERSHEY_COMPLEX, 1.2, Scalar(255, 255, 255), 2);
 
             putText(smallFrame, "High Score: " + to_string(highScore),
                     Point(cx - 120, cy + 35),
                     FONT_HERSHEY_COMPLEX, 1.0, Scalar(0, 215, 255), 2);
 
-            putText(smallFrame, "Aperte R para reiniciar",
-                    Point(cx - 170, cy + 80),
+            putText(smallFrame, "Type R to restart",
+                    Point(cx -150, cy + 90),
                     FONT_HERSHEY_PLAIN, 1.8, Scalar(200, 200, 200), 2);
 
-            putText(smallFrame, "Aperte Q para sair",
+            putText(smallFrame, "Type Q to quit",
                     Point(cx - 130, cy + 120),
                     FONT_HERSHEY_PLAIN, 1.8, Scalar(200, 200, 200), 2);
 

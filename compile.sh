@@ -1,0 +1,1 @@
+g++ main.cpp -o flappy $(pkg-config --cflags --libs opencv4)
